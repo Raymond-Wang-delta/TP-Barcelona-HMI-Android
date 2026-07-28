@@ -5,45 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Android TP Barcelona HMI APP Download Link</title>
   <style>
+    :root {
+      /* 台達經典配色規範 */
+      --delta-blue-dark: #003366;  /* 深藍底色 */
+      --delta-blue-accent: #00509d;/* 漸變輔助藍 */
+      --delta-green: #00A650;      /* 台達品牌綠 */
+      --delta-green-hover: #008842;/* 按鈕 Hover 綠 */
+      --card-bg: rgba(255, 255, 255, 0.08); /* 半透明卡片容器 */
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #1e40ff;
-      color: white;
+      /* 使用質感漸層深藍背景，減輕眼睛負擔 */
+      background: linear-gradient(135deg, var(--delta-blue-dark) 0%, var(--delta-blue-accent) 100%);
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       text-align: center;
+      box-sizing: border-box;
+      padding: 20px;
     }
+
+    /* 將內容收納至微光卡片中，提高質感與閱讀舒適度 */
+    .container {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      padding: 3rem 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      max-width: 480px;
+      width: 100%;
+    }
+
+    /* 上方標誌性綠色 Icon */
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1rem;
+      fill: var(--delta-green);
+      filter: drop-shadow(0 2px 8px rgba(0, 166, 80, 0.4));
+    }
+
     h1 {
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 2rem;
+      margin-top: 0;
       margin-bottom: 2rem;
+      letter-spacing: 0.5px;
     }
+
     a.download-link {
-      background-color: #ff7043;
+      background-color: var(--delta-green);
       color: white;
       text-decoration: none;
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      border-radius: 40px;
-      box-shadow: 0 4px 12px rgba(255, 112, 67, 0.7);
-      transition: background-color 0.3s ease;
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 166, 80, 0.4);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
+
     a.download-link:hover {
-      background-color: #e64a19;
+      background-color: var(--delta-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 166, 80, 0.6);
+    }
+
+    .release-notes {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
-  <h1>TP Barcelona HMI APP download</h1>
-  <a href="TP_Barcelona_HMI_APP.apk" class="download-link" download>
-    📥 Click to download TP Barcelona HMI APP
-  </a>
-  <div class="release-notes" style="margin-top: 20px;">
-    <strong>V 0.0 (2026-08-11) Description: Initial Android TP Barcelona HMI APP</strong><br />
+
+  <div class="container">
+    <!-- 台達綠色彩風格的 Android/App 下載圖案 (SVG) -->
+    <svg class="app-icon" viewBox="0 0 24 24">
+      <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+    </svg>
+
+    <h1>TP Barcelona HMI APP download</h1>
+
+    <a href="TP_Barcelona_HMI_APP.apk" class="download-link" download>
+      <span>📥 Click to download APP</span>
+    </a>
+
+    <div class="release-notes">
+      <strong>V 0.0 (2026-08-14)</strong><br />
+      <span>Description: Initial Android TP Barcelona HMI APP</span>
+    </div>
   </div>
+
 </body>
 </html>
